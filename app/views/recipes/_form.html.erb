@@ -1,0 +1,15 @@
+<%if flash[:errors]%>
+  <ul>
+    <%flash[:errors].each do |e| %>
+      <li><%=e%></li>
+    <%end%>
+  </ul>
+<%end%>
+
+<%=form_for @recipe do |f|%>
+<%=f.label :name%>
+<%=f.text_field :name%>
+<%=f.label "Select Ingredients"%>
+<%=f.collection_check_boxes :ingredient_ids, @ingredients, :id, :name%>
+<%=f.submit %>
+<%end %>

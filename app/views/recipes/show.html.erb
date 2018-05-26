@@ -1,0 +1,9 @@
+<h1><%=@recipe.name%></h1>
+
+<%if @recipe.ingredients%>
+<ul>
+  <%@recipe.ingredients.each do |i|%>
+  <li> <%=i.name%> </li>
+  <%end %>
+</ul>
+<%end %>

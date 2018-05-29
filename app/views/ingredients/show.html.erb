@@ -1,0 +1,6 @@
+<%= @ingredient.name %>
+<% if @ingredient.recipes %>
+  <% @ingredient.recipes.each do |rec| %>
+    <%= rec.name %><br>
+  <% end %>
+<% end %>
